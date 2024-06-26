@@ -78,8 +78,8 @@
 
 11. **Comenzar a poblar la base de datos mediante los archivos `rest.client` en la carpeta `docs`:**
 
-      > [!IMPORTANT]
-      > utilizar la extension rest.client para mayor comodidad
+> [!IMPORTANT]
+> utilizar la extension rest.client para mayor comodidad.
 
     - Generar usuario, activar cuenta y loguear para obtener token: en `auth.rest`.
     - Poblar `categoria`, `linea`, `local`, `tipo`, `unidadMedidaVenta` en sus respectivos archivos para luego utilizar la data en `maestraArticulo`.
