@@ -76,7 +76,7 @@
 
     `root/src/infraestructura/data_inicial/script_data_inicial.sql`
 
-11. **Inicializar servidor**
+11. **Inicializar servidor:**
 
    ```bash
    npm run dev
