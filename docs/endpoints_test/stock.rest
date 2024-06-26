@@ -1,0 +1,70 @@
+@server=http://localhost:3000/api
+@token=token generado iniciar-sesion
+
+### Crear Stock
+POST {{server}}/stocks/
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "codigo_barra" : "12345678912345",
+    "cantidad_total": null,
+    "stock_detalle":[
+        {
+            "cantidad_ingresada": 200,
+            "fecha_vencimiento": "2024-03-15T00:00:00Z",
+            "proveedor": "Gustavo y compañia",
+            "lote": "123456",
+            "precio_compra": 1000,
+            "observacion": "Descuento por inicio"
+        }
+    ],
+    "cantidad_ideal":100,
+    "cantidad_minima":10
+}
+
+### Obtener Stocks
+GET {{server}}/stocks?page=1&limit=10
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+### Obtener Stock por id
+GET {{server}}/stocks/1
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+### Actualizar Stock
+PUT {{server}}/stocks/
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "id": 8,
+    "maestra_articulo_id": 20,
+    "cantidad_ideal": 100,
+    "cantidad_minima": 10,
+    "stock_detalle":[
+{
+          "id": 19,
+          "stock_id": 8,
+          "lote": "150420",
+          "cantidad_ingresada": 20,
+          "cantidad_vendida": 0,
+          "cantidad_merma": 0,
+          "proveedor": "Gustavo y compañia",
+          "precio_compra": 1200,
+          "observacion": "Descuento por inicio"
+        }
+    ]
+}
+
+
+### Borrar todo el stock
+DELETE {{server}}/stocks/1/undefined
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+### Borrar solo detalle del stock
+DELETE {{server}}/stocks/1/1
+Authorization: Bearer {{token}}
+Content-Type: application/json

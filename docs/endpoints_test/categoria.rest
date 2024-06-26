@@ -1,0 +1,32 @@
+@server=http://localhost:3000/api
+@token=token generado iniciar-sesion
+
+### Crear categoria
+POST {{server}}/categorias/
+Content-Type: application/json
+
+{
+    "nombre":"productos eliminsado",
+    "descripcion": "productos para eliminacion"
+}
+
+### Obtener categorias
+GET {{server}}/categorias/
+Content-Type: application/json
+
+### Obtener Categoria por id
+GET {{server}}/categorias/1
+Content-Type: application/json
+
+### actualizar categoria
+PUT {{server}}/categorias/2
+Content-Type: application/json
+
+{
+    "nombre":"productos belleza",
+    "descripcion": "productos destinados a la higiene personal y belleza completa"
+}
+
+### actualizar categoria
+DELETE {{server}}/categorias/5
+Content-Type: application/json

@@ -1,0 +1,31 @@
+@server=http://localhost:3000/api
+@token=token generado iniciar-sesion
+
+### Registrar Usuarios
+POST {{server}}/auth/registrar
+Content-Type: application/json
+
+{
+    "alias":"usuarioinventado",
+    "nombre_completo": "usuario iventado backend avanzado",
+    "email": "usuarioinventado@gmail.com",
+    "contrasena": "gustavo1234",
+    "telefono": "949606615"
+} 
+
+### Loguin de usuarios
+POST {{server}}/auth/iniciar-sesion
+Content-Type: application/json
+
+{
+    "email":"usuarioinventado@gmail.com",
+    "contrasena":"gustavo1234"
+}
+
+### Loguin de usuarios
+POST {{server}}/auth/reenviar-token
+Content-Type: application/json
+
+{
+    "email":"usuarioinventado@gmail.com",
+}

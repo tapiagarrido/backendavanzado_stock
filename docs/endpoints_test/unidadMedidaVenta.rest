@@ -1,0 +1,35 @@
+@server=http://localhost:3000/api
+@token=token generado iniciar-sesion
+
+### Crear Unidad Medida Venta
+POST {{server}}/unidades-medida-venta/
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "nombre":"litro"
+}
+
+### Obtener Unidad Medida Venta
+GET {{server}}/unidades-medida-venta/
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+### Obtener Unidad Medida Venta por id
+GET {{server}}/unidades-medida-venta/1
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+### Actualizar Unidad Medida Venta
+PUT {{server}}/unidades-medida-venta/2
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "nombre":"estante central pared"
+}
+
+### Borrar Unidad Medida Venta
+DELETE {{server}}/unidades-medida-venta/2
+Authorization: Bearer {{token}}
+Content-Type: application/json

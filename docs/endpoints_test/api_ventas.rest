@@ -1,0 +1,29 @@
+@server=http://localhost:3000/api
+@token=token generado iniciar-sesion
+
+### Crear Venta
+POST {{server}}/ventas/
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "vendedor":"",
+    "fecha_venta":"",
+    "detalles":[
+        {
+            "codigo_barra": "12345678912345",
+            "cantidad": 5,
+            "precio_unitario": "1100"
+        }
+    ]
+}
+
+### Obtener Ventas
+GET {{server}}/ventas?page=1&limit=3
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+### Obtener Venta
+GET {{server}}/ventas/1
+Authorization: Bearer {{token}}
+Content-Type: application/json

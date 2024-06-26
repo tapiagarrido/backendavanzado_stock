@@ -1,0 +1,56 @@
+@server=http://localhost:3000/api
+@token=token generado iniciar-sesion
+
+### Crear Maestra Articulo
+POST {{server}}/maestra-articulo/
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "nombre":"leche liquida",
+    "descripcion": "caja de leche de 1 litro con interior aluminio",
+    "codigo_barra":"12345678912345",
+    "marca":"Colun",
+    "valor":1100,
+    "tipo_id":1,
+    "linea_id":1,
+    "local_id":1,
+    "unidad_medida_venta_id":1
+}
+
+### Obtener Maestra Articulo
+GET {{server}}/maestra-articulo?page=1&limit=10
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+### Obtener Maestra Articulo por id
+GET {{server}}/maestra-articulo/12345678912345
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+### Actualizar Maestra Articulo
+PUT {{server}}/maestra-articulo/1
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "nombre":"leche liquida",
+    "descripcion": "caja de leche de 1 litro con interior aluminio",
+    "codigo_barra":"12345678912345",
+    "marca":"Colun",
+    "valor":1100,
+    "tipo_id":1,
+    "linea_id":1,
+    "local_id":1,
+    "unidad_medida_venta_id":1
+}
+
+### Borrar Maestra Articulo
+DELETE {{server}}/maestra-articulo/1
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+### Obtener Busqueda por nombre
+GET {{server}}/maestra-articulo/buscar?nombre=lec
+Authorization: Bearer {{token}}
+Content-Type: application/json

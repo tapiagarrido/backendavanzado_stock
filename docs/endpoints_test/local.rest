@@ -1,0 +1,37 @@
+@server=http://localhost:3000/api
+@token=token generado iniciar-sesion
+
+### Crear Local
+POST {{server}}/locales/
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "nombre":"refrigerador central",
+    "descripcion": "maquina con temperatura adecuada para el mantenimiento de lacteos"
+}
+
+### Obtener Locales
+GET {{server}}/locales/
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+### Obtener Local por id
+GET {{server}}/locales/1
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+### Actualizar Local
+PUT {{server}}/locales/1
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "nombre":"estante central pared",
+    "descripcion": "local que esta lateral al congelador de madera 4 pisos"
+}
+
+### Borrar Local
+DELETE {{server}}/locales/2
+Authorization: Bearer {{token}}
+Content-Type: application/json

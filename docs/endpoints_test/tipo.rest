@@ -1,0 +1,37 @@
+@server=http://localhost:3000/api
+@token=token generado iniciar-sesion
+
+### Crear Tipo
+POST {{server}}/tipos/
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "nombre":"lacteo liquido",
+    "descripcion": "leches naturales o saborizadas"
+}
+
+### Obtener Tipos
+GET {{server}}/tipos?page=1&limit=10
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+### Obtener Tipo por id
+GET {{server}}/tipos/4
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+### Actualizar Tipo
+PUT {{server}}/tipos/1
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "nombre":"leche",
+    "descripcion": "productos lacteos de diferentes marcas en caja sellada"
+}
+
+### Borrar Tipos
+DELETE {{server}}/tipos/2
+Authorization: Bearer {{token}}
+Content-Type: application/json

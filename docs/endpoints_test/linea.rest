@@ -1,0 +1,37 @@
+@server=http://localhost:3000/api
+@token=token generado iniciar-sesion
+
+### Crear Linea
+POST {{server}}/lineas/
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "nombre":"lacteos",
+    "descripcion": "productos lacteos envasados"
+}
+
+### Obtener Lineas
+GET {{server}}/lineas/
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+### Obtener Linea por id
+GET {{server}}/lineas/1
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+### Actualizar Linea
+PUT {{server}}/lineas/2
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "nombre":"envasados2.2",
+    "descripcion": "productos embalados en cajas"
+}
+
+### Borrar Tipos
+DELETE {{server}}/lineas/2
+Authorization: Bearer {{token}}
+Content-Type: application/json
