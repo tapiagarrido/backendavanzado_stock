@@ -77,7 +77,8 @@
     `root/src/infraestructura/data_inicial/script_data_inicial.sql`
 
 11. **Comenzar a poblar la base de datos mediante los archivos `rest.client` en la carpeta `docs`:**
-   utilizar la extension rest.client para mayor comodidad
+
+      ***utilizar la extension rest.client para mayor comodidad***
 
     - Generar usuario, activar cuenta y loguear para obtener token: en `auth.rest`.
     - Poblar `categoria`, `linea`, `local`, `tipo`, `unidadMedidaVenta` en sus respectivos archivos para luego utilizar la data en `maestraArticulo`.
