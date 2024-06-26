@@ -75,8 +75,9 @@
 10. **Agregar parámetros mediante SQL ubicado en la carpeta:**
 
     `root/src/infraestructura/data_inicial/script_data_inicial.sql`
-    
-11.  **Inicializar servidor**
+
+11. **Inicializar servidor**
+
    ```bash
    npm run dev
    ```
@@ -92,4 +93,3 @@
     - Generar stock en `stock.rest` para luego poder realizar ventas.
 
 13. **Si la data está cargada en stock y el microservicio de ventas está corriendo, podemos utilizar `api_ventas.rest` para ejecutar una venta.**
-
