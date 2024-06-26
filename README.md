@@ -75,8 +75,11 @@
 10. **Agregar parámetros mediante SQL ubicado en la carpeta:**
 
     `root/src/infraestructura/data_inicial/script_data_inicial.sql`
+    
+11.  **Inicializar servidor**
+	`npm run dev`
 
-11. **Comenzar a poblar la base de datos mediante los archivos `rest.client` en la carpeta `docs`:**
+12. **Comenzar a poblar la base de datos mediante los archivos `rest.client` en la carpeta `docs`:**
 
 > [!IMPORTANT]
 > utilizar la extension rest.client para mayor comodidad.
