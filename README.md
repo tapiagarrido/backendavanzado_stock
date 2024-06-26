@@ -1,4 +1,4 @@
-# Market Facil Backend
+# Microservicio Bodega y Stock
 
 ## Bienvenidos a la instalación del sistema
 
@@ -77,7 +77,9 @@
     `root/src/infraestructura/data_inicial/script_data_inicial.sql`
     
 11.  **Inicializar servidor**
-	`npm run dev`
+   ```bash
+   npm run dev
+   ```
 
 12. **Comenzar a poblar la base de datos mediante los archivos `rest.client` en la carpeta `docs`:**
 
@@ -89,6 +91,5 @@
     - Poblar `maestraArticulo`.
     - Generar stock en `stock.rest` para luego poder realizar ventas.
 
-12. **Si la data está cargada en stock y el microservicio de ventas está corriendo, podemos utilizar `api_ventas.rest` para ejecutar una venta.**
+13. **Si la data está cargada en stock y el microservicio de ventas está corriendo, podemos utilizar `api_ventas.rest` para ejecutar una venta.**
 
-¡Listo! Ahora puedes disfrutar de tu sistema Market Facil Backend.
