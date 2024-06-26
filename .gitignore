@@ -3,5 +3,5 @@ node_modules/
 dist/
 build/
 docs/
-prisma/
+prisma/migrations
 postgres/
